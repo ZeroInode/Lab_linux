@@ -1,0 +1,144 @@
+    1  sudo ls
+    2  exit
+    3  ls
+    4  mkdir GiHub_rep
+    5  cd GiHub_rep/
+    6  git init
+    7  ls .git/objects
+    8  git status
+    9  git remote add origin https://github.com/ZeroInode/Lab_linux.git
+   10  git push -u origin master
+   11  whoami
+   12  whoaim
+   13  whoami
+   14  echo "Hello World"
+   15  apropos -s1 время
+   16  apropos -s1 time
+   17  sudo /etc/cron.daily/man-db.cron
+   18  date
+   19  apropos -s1 время
+   20  cal
+   21  man cal
+   22  cal -3
+   23  apropos история команд
+   24  history
+   25  pwd
+   26  dc /
+   27  cd /
+   28  cd ..
+   29  pwd
+   30  ls
+   31  ls /var
+   32  cd ~
+   33  cd /
+   34  cd
+   35  cd ..
+   36  pwd
+   37  ls 
+   38  ls -l
+   39  cd
+   40  mkdir fruits
+   41  cd /
+   42  mkdir ~/animals 
+   43  touch /tmp/temp
+   44  cd ~/fruits
+   45  touch apple
+   46  touch banana
+   47  touch pineaple
+   48  touch lion
+   49  pwd
+   50  ls
+   51  ls ~
+   52  touch ~/animals/cat.txt
+   53  touch ~/animals/dog.txt
+   54  touch ~/animals/elephant.txt
+   55  ll 
+   56  ls b*
+   57  ls *a
+   58  ls [bi]*
+   59  ls b* i*
+   60  cp /etc/passwd ~
+   61  cat /etc/issue
+   62  man cat
+   63  cat /etc/issue > apple 
+   64  cat apple 
+   65  man mn
+   66  man mv
+   67  mv lion ~/animals/
+   68  ls ~/animals/
+   69  mv pineaple pineapple
+   70  ls
+   71  man wc
+   72  wc -l /etc/passwd
+   73  cd ~
+   74  ln -s /etc/passwd passwd_link
+   75  ln .bash_history hystory_hard
+   76  ls -l
+   77  ls -al
+   78  rm fruits/apple 
+   79  mkdir rmme
+   80  rmdir rmme
+   81  rmdir fruits
+   82  rm -fr fruits
+   83  cat /etc/passwd /var/log/boot.log 
+   84  cp /etc/init.d/ ~
+   85  cp -r /etc/init.d/ ~
+   86  rm -fr /etc/init.d/
+   87  rm -fr ~/etc/init.d/
+   88  cut -d: -f1 /etc/passwd
+   89  man sort
+   90  cut -d: -f1 /etc/passwd | sort
+   91  man column
+   92  man less
+   93  cut -d -f1,3,4 /etc/passwd
+   94  cut -d: -f1,3,4 /etc/passwd
+   95  cut -d: -f1,3,4 /etc/passwd | column -ts:
+   96  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+   97  cat /etc/passwd
+   98  cut -d: -f1,3 /etc/passwd | sort
+   99  man grep
+  100  grep :/bin/bash /etc/passwd | wc -l
+  101  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -r
+  102  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head
+  103  man head
+  104  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n25
+  105  rpm -ql man-db | xargs -l du 2> /dev/null |sort -n
+  106  man sort
+  107  top -b -n1 | sort -d
+  108  top -b -n1 | sort -d -k12
+  109  top -b -n1 | awk '{printf "%35s %s\n", $12, $6}'
+  110  cat /etc/passwd | tr ":" " "
+  111  cat /etc/passwd/ | awk -F: ]{printf "%15s %s\n", $1, $7}'
+
+
+  112  cat /etc/passwd/ | awk -F: '{printf "%15s %s\n", $1, $7}'
+  113  cat /etc/passwd | awk -F: '{printf "%15s %s\n", $1, $7}'
+  114  cd /usr/share/doc/git-*
+  115  pwd
+  116  cat user-manual.txt | tr ' ' '\012' 
+  117  cat user-manual.txt
+  118  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]'
+  119  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' 
+  120  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c 
+  121  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  122  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -15
+  123  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+  124  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  125  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+  126  cd 
+  127  ping ya.ru
+  128  curl wttr.in
+  129  hostname -I
+  130  curl ifconfig.me
+  131  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md | less
+  132  su
+  133  id
+  134  sudo id
+  135  id
+  136  sudo less /var/log/messages 
+  137  less /var/log/messages 
+  138  su
+  139  history | less
+  140  ls
+  141  cat history > ~/GiHub_rep/history.txt
+  142  history > ~/GiHub_rep/history.txt
